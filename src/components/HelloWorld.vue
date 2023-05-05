@@ -32,7 +32,7 @@ const cars = [
           </va-list-item-label>
         </va-list-item-section>
         <va-list-item-section icon>
-          <img src="../assets/Truck.png" height="30">
+          <img src="../assets/Battery.png" height="30">
         </va-list-item-section>
       </va-list-item>
     </va-list>
