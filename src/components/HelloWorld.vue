@@ -13,6 +13,66 @@ const cars = [
     battery: "40",
     eta: "17",
   },
+  {
+    name: "car1",
+    type: "Goods Transportation",
+    battery: "40",
+    eta: "17",
+  },
+  {
+    name: "car1",
+    type: "Goods Transportation",
+    battery: "40",
+    eta: "17",
+  },
+  {
+    name: "car1",
+    type: "Goods Transportation",
+    battery: "40",
+    eta: "17",
+  },
+  {
+    name: "car1",
+    type: "Goods Transportation",
+    battery: "40",
+    eta: "17",
+  },
+  {
+    name: "car1",
+    type: "Goods Transportation",
+    battery: "40",
+    eta: "17",
+  },
+  {
+    name: "car1",
+    type: "Goods Transportation",
+    battery: "40",
+    eta: "17",
+  },
+  {
+    name: "car1",
+    type: "Goods Transportation",
+    battery: "40",
+    eta: "17",
+  },
+  {
+    name: "car1",
+    type: "Goods Transportation",
+    battery: "40",
+    eta: "17",
+  },
+  {
+    name: "car1",
+    type: "Goods Transportation",
+    battery: "40",
+    eta: "17",
+  },
+  {
+    name: "car1",
+    type: "Goods Transportation",
+    battery: "40",
+    eta: "17",
+  },
 ];
 </script>
 
@@ -25,10 +85,10 @@ const cars = [
         </va-list-item-section>
         <va-list-item-section>
           <va-list-item-label>
-            {{ car.name }}
+            {{ car.name }} - {{ car.type }}
           </va-list-item-label>
           <va-list-item-label caption>
-            {{ car.type }}
+            ETA: {{ car.eta }} min - Battery {{ car.battery }}% 
           </va-list-item-label>
         </va-list-item-section>
         <va-list-item-section icon>
