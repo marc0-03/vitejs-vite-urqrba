@@ -8,102 +8,116 @@ defineProps({
 const count = ref(0);
 const cars = [
   {
-    name: "car1",
-    type: "Goods Transportation",
-    battery: "40",
-    eta: "17",
+    name: 'car1',
+    type: 'Goods Transportation',
+    battery: '40',
+    eta: '17',
   },
   {
-    name: "car1",
-    type: "Goods Transportation",
-    battery: "40",
-    eta: "17",
+    name: 'car1',
+    type: 'Goods Transportation',
+    battery: '40',
+    eta: '17',
   },
   {
-    name: "car1",
-    type: "Goods Transportation",
-    battery: "40",
-    eta: "17",
+    name: 'car1',
+    type: 'Goods Transportation',
+    battery: '40',
+    eta: '17',
   },
   {
-    name: "car1",
-    type: "Goods Transportation",
-    battery: "40",
-    eta: "17",
+    name: 'car1',
+    type: 'Goods Transportation',
+    battery: '40',
+    eta: '17',
   },
   {
-    name: "car1",
-    type: "Goods Transportation",
-    battery: "40",
-    eta: "17",
+    name: 'car1',
+    type: 'Goods Transportation',
+    battery: '40',
+    eta: '17',
   },
   {
-    name: "car1",
-    type: "Goods Transportation",
-    battery: "40",
-    eta: "17",
+    name: 'car1',
+    type: 'Goods Transportation',
+    battery: '40',
+    eta: '17',
   },
   {
-    name: "car1",
-    type: "Goods Transportation",
-    battery: "40",
-    eta: "17",
+    name: 'car1',
+    type: 'Goods Transportation',
+    battery: '40',
+    eta: '17',
   },
   {
-    name: "car1",
-    type: "Goods Transportation",
-    battery: "40",
-    eta: "17",
+    name: 'car1',
+    type: 'Goods Transportation',
+    battery: '40',
+    eta: '17',
   },
   {
-    name: "car1",
-    type: "Goods Transportation",
-    battery: "40",
-    eta: "17",
+    name: 'car1',
+    type: 'Goods Transportation',
+    battery: '40',
+    eta: '17',
   },
   {
-    name: "car1",
-    type: "Goods Transportation",
-    battery: "40",
-    eta: "17",
+    name: 'car1',
+    type: 'Goods Transportation',
+    battery: '40',
+    eta: '17',
   },
   {
-    name: "car1",
-    type: "Goods Transportation",
-    battery: "40",
-    eta: "17",
+    name: 'car1',
+    type: 'Goods Transportation',
+    battery: '40',
+    eta: '17',
   },
 ];
 </script>
+<script>
+export default {
+  data() {
+    return {
+      items: [
+        { title: 'Dashboard', icon: 'dashboard' },
+        { title: 'Sidebar demo', icon: 'room', active: true },
+        { title: 'Loop', icon: 'loop' },
+      ],
+      minimized: false,
+    };
+  },
+};
+</script>
 
 <template>
-  <va-scroll-container style="max-height: 400px" vertical>
-    <va-list>
+  <div style="height: 48rem">
+    <va-list-item-section icon>
+      <va-checkbox v-model="minimized" class="mt-2" label="Minimized" />
+    </va-list-item-section>
+    <va-list-item>
+      <va-list-item-section>
+        <va-input v-model="value" class="mb-6" placeholder="Placeholder" />
+      </va-list-item-section>
+    </va-list-item>
+    <va-sidebar :minimized="minimized" width="21rem" minimized-width="64px">
       <va-list-item v-for="car in cars" :key="index" class="list__item">
         <va-list-item-section icon>
-          <img src="../assets/Truck.png" height="30">
+          <img src="../assets/Truck.png" height="30" />
         </va-list-item-section>
         <va-list-item-section>
           <va-list-item-label>
             {{ car.name }} - {{ car.type }}
           </va-list-item-label>
           <va-list-item-label caption>
-            ETA: {{ car.eta }} min - Battery {{ car.battery }}% 
+            ETA: {{ car.eta }} min - Battery {{ car.battery }}%
           </va-list-item-label>
         </va-list-item-section>
         <va-list-item-section icon>
-          <img src="../assets/Battery.png" height="30">
+          <img src="../assets/Battery.png" height="30" />
         </va-list-item-section>
       </va-list-item>
-    </va-list>
-  </va-scroll-container>
-
-  <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p>
+    </va-sidebar>
   </div>
 </template>
 
