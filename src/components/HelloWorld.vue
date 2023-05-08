@@ -73,17 +73,60 @@ const cars = [
     battery: '40',
     eta: '17',
   },
+  {
+    name: 'car1',
+    type: 'Goods Transportation',
+    battery: '40',
+    eta: '17',
+  },
+  {
+    name: 'car1',
+    type: 'Goods Transportation',
+    battery: '40',
+    eta: '17',
+  },
+  {
+    name: 'car1',
+    type: 'Goods Transportation',
+    battery: '40',
+    eta: '17',
+  },
+  {
+    name: 'car1',
+    type: 'Goods Transportation',
+    battery: '40',
+    eta: '17',
+  },
+  {
+    name: 'car1',
+    type: 'Goods Transportation',
+    battery: '40',
+    eta: '17',
+  },
+  {
+    name: 'car1',
+    type: 'Goods Transportation',
+    battery: '40',
+    eta: '17',
+  },
+  {
+    name: 'car1',
+    type: 'Goods Transportation',
+    battery: '40',
+    eta: '17',
+  },
+  {
+    name: 'car1',
+    type: 'Goods Transportation',
+    battery: '40',
+    eta: '17',
+  },
 ];
 </script>
 <script>
 export default {
   data() {
     return {
-      items: [
-        { title: 'Dashboard', icon: 'dashboard' },
-        { title: 'Sidebar demo', icon: 'room', active: true },
-        { title: 'Loop', icon: 'loop' },
-      ],
       minimized: false,
     };
   },
@@ -92,32 +135,41 @@ export default {
 
 <template>
   <div style="height: 48rem">
-    <va-list-item-section icon>
-      <va-checkbox v-model="minimized" class="mt-2" label="Minimized" />
-    </va-list-item-section>
-    <va-list-item>
+    <va-list-item width="21rem">
       <va-list-item-section>
-        <va-input v-model="value" class="mb-6" placeholder="Placeholder" />
+        <va-input v-model="value" class="mb-6" placeholder="Search for a car" />
+      </va-list-item-section>
+      <va-list-item-section icon>
+        <va-checkbox
+          v-model="minimized"
+          class="mt-2"
+          color="#9c27b0"
+          checked-icon="X"
+        />
       </va-list-item-section>
     </va-list-item>
-    <va-sidebar :minimized="minimized" width="21rem" minimized-width="64px">
-      <va-list-item v-for="car in cars" :key="index" class="list__item">
-        <va-list-item-section icon>
-          <img src="../assets/Truck.png" height="30" />
-        </va-list-item-section>
-        <va-list-item-section>
-          <va-list-item-label>
-            {{ car.name }} - {{ car.type }}
-          </va-list-item-label>
-          <va-list-item-label caption>
-            ETA: {{ car.eta }} min - Battery {{ car.battery }}%
-          </va-list-item-label>
-        </va-list-item-section>
-        <va-list-item-section icon>
-          <img src="../assets/Battery.png" height="30" />
-        </va-list-item-section>
-      </va-list-item>
-    </va-sidebar>
+
+    <va-list-separator spaced="true"> </va-list-separator>
+    <va-scroll-container style="max-height: 60rem" vertical>
+      <va-sidebar :minimized="minimized" width="21rem" minimized-width="10px">
+        <va-list-item v-for="car in cars" :key="index" class="list__item">
+          <va-list-item-section icon>
+            <img src="../assets/Truck.png" height="30" />
+          </va-list-item-section>
+          <va-list-item-section>
+            <va-list-item-label>
+              {{ car.name }} - {{ car.type }}
+            </va-list-item-label>
+            <va-list-item-label caption>
+              ETA: {{ car.eta }} min - Battery {{ car.battery }}%
+            </va-list-item-label>
+          </va-list-item-section>
+          <va-list-item-section icon>
+            <img src="../assets/Battery.png" height="30" />
+          </va-list-item-section>
+        </va-list-item>
+      </va-sidebar>
+    </va-scroll-container>
   </div>
 </template>
 

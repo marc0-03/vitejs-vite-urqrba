@@ -38,6 +38,9 @@ body {
   /*place-items: center;*/
   min-width: 320px;
   min-height: 100vh;
+  background-image: url(https://images.photowall.com/products/60671/political-world-map-1.jpg?h=699&q=85);
+  height: 100%;
+  overflow: hidden;
 }
 
 h1 {
@@ -70,9 +73,9 @@ button:focus-visible {
 
 #app {
   max-width: 1280px;
-  /*margin: 0 auto;*/
+  /*margin: 0 auto;
   padding: 2rem;
-  /*text-align: center;*/
+  text-align: center;*/
 }
 
 @media (prefers-color-scheme: light) {
