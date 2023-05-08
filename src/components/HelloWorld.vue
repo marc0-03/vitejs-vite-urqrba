@@ -12,108 +12,126 @@ const cars = [
     type: 'Goods Transportation',
     battery: '40',
     eta: '17',
+    src: '../assets/Truck.png',
+  },
+  {
+    name: 'car1',
+    type: 'Passenger Transportation',
+    battery: '40',
+    eta: '17',
+    src: '../assets/Truck.png',
   },
   {
     name: 'car1',
     type: 'Goods Transportation',
     battery: '40',
     eta: '17',
+    src: '../assets/Truck.png',
   },
   {
     name: 'car1',
     type: 'Goods Transportation',
     battery: '40',
     eta: '17',
+    src: '../assets/Truck.png',
   },
   {
     name: 'car1',
     type: 'Goods Transportation',
     battery: '40',
     eta: '17',
+    src: '../assets/Truck.png',
   },
   {
     name: 'car1',
     type: 'Goods Transportation',
     battery: '40',
     eta: '17',
+    src: '../assets/Truck.png',
   },
   {
     name: 'car1',
     type: 'Goods Transportation',
     battery: '40',
     eta: '17',
+    src: '../assets/Truck.png',
   },
   {
     name: 'car1',
     type: 'Goods Transportation',
     battery: '40',
     eta: '17',
+    src: '../assets/Truck.png',
   },
   {
     name: 'car1',
     type: 'Goods Transportation',
     battery: '40',
     eta: '17',
+    src: '../assets/Truck.png',
   },
   {
     name: 'car1',
     type: 'Goods Transportation',
     battery: '40',
     eta: '17',
+    src: '../assets/Truck.png',
   },
   {
     name: 'car1',
     type: 'Goods Transportation',
     battery: '40',
     eta: '17',
+    src: '../assets/Truck.png',
   },
   {
     name: 'car1',
     type: 'Goods Transportation',
     battery: '40',
     eta: '17',
+    src: '../assets/Truck.png',
   },
   {
     name: 'car1',
     type: 'Goods Transportation',
     battery: '40',
     eta: '17',
+    src: '../assets/Truck.png',
   },
   {
     name: 'car1',
     type: 'Goods Transportation',
     battery: '40',
     eta: '17',
+    src: '../assets/Truck.png',
   },
   {
     name: 'car1',
     type: 'Goods Transportation',
     battery: '40',
     eta: '17',
+    src: '../assets/Truck.png',
   },
   {
     name: 'car1',
     type: 'Goods Transportation',
     battery: '40',
     eta: '17',
+    src: '../assets/Truck.png',
   },
   {
     name: 'car1',
     type: 'Goods Transportation',
     battery: '40',
     eta: '17',
+    src: '../assets/Truck.png',
   },
   {
     name: 'car1',
     type: 'Goods Transportation',
     battery: '40',
     eta: '17',
-  },
-  {
-    name: 'car1',
-    type: 'Goods Transportation',
-    battery: '40',
-    eta: '17',
+    src: '../assets/Medic.png',
   },
   {
     name: 'car1',
@@ -135,28 +153,41 @@ export default {
 
 <template>
   <div style="height: 100%">
-    <div class="searcch_and_x">
-    <va-list-item width="21rem">
-      <va-list-item-section>
-        <va-input v-model="value" class="mb-6" placeholder="Search for a car" />
-      </va-list-item-section>
-      <va-list-item-section icon>
-        <va-checkbox
-          v-model="minimized"
-          class="mt-2"
-          color="#9c27b0"
-          checked-icon="X"
-        />
-      </va-list-item-section>
-    </va-list-item>
-    <va-list-separator spaced="true"> </va-list-separator>
+    <div class="search_and_X">
+      <va-list-item width="21rem">
+        <va-list-item-section>
+          <va-input
+            v-model="value"
+            class="mb-6"
+            placeholder="Search for a car"
+          />
+        </va-list-item-section>
+        <va-list-item-section icon>
+          <va-checkbox
+            v-model="minimized"
+            class="mt-2"
+            color="var(--va-text-primary)"
+            checked-icon="X"
+          />
+        </va-list-item-section>
+      </va-list-item>
     </div>
-      <va-sidebar :minimized="minimized" width="21rem" minimized-width="10px">
-      <va-scroll-container style="max-height: 45rem" vertical >
+    <va-sidebar :minimized="minimized" width="21rem" minimized-width="64px">
+      <va-scroll-container style="max-height: 47rem" vertical>
         <va-list-item v-for="car in cars" :key="index" class="list__item">
-          <va-list-item-section icon>
+
+          <va-list-item-section icon v-if="car.type=='Goods Transportation'">
             <img src="../assets/Truck.png" height="30" />
           </va-list-item-section>
+
+          <va-list-item-section icon v-if="car.type=='Medicinal Transportation'">
+            <img src="../assets/Medic.png" height="30" />
+          </va-list-item-section>
+
+          <va-list-item-section icon v-if="car.type=='Passenger Transportation'">
+            <img src="../assets/Car.png" height="30" />
+          </va-list-item-section>
+          
           <va-list-item-section>
             <va-list-item-label>
               {{ car.name }} - {{ car.type }}
@@ -169,9 +200,8 @@ export default {
             <img src="../assets/Battery.png" height="30" />
           </va-list-item-section>
         </va-list-item>
-        </va-scroll-container>
-      </va-sidebar>
-    
+      </va-scroll-container>
+    </va-sidebar>
   </div>
 </template>
 
@@ -183,9 +213,12 @@ export default {
   margin-left: 2rem;
 }
 .search_and_X {
-  height: 10%; 
-  background-color: #1a1a1a; 
-  padding-top: 2rem; 
-  padding-bottom: 2rem;
+  height: 10%;
+  background-color: var(--va-text-primary);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 0.3rem;
+  width: 21rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.55);
 }
 </style>

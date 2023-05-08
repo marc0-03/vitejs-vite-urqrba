@@ -1,12 +1,12 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue';
-
+import Avatar from './components/Avatar.vue';
 </script>
 
 <template>
-  <div>
-  </div>
+  <div></div>
   <HelloWorld msg="Vite + Vue" />
+  <Avatar />
 </template>
 
 <style scoped>
