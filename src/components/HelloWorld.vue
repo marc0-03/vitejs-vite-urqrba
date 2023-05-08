@@ -135,7 +135,7 @@ export default {
 
 <template>
   <div style="height: 100%">
-    <div style="height: 10%">
+    <div class="searcch_and_x">
     <va-list-item width="21rem">
       <va-list-item-section>
         <va-input v-model="value" class="mb-6" placeholder="Search for a car" />
@@ -151,8 +151,8 @@ export default {
     </va-list-item>
     <va-list-separator spaced="true"> </va-list-separator>
     </div>
-    <va-scroll-container style="max-height: 45rem" vertical>
       <va-sidebar :minimized="minimized" width="21rem" minimized-width="10px">
+      <va-scroll-container style="max-height: 45rem" vertical >
         <va-list-item v-for="car in cars" :key="index" class="list__item">
           <va-list-item-section icon>
             <img src="../assets/Truck.png" height="30" />
@@ -169,8 +169,9 @@ export default {
             <img src="../assets/Battery.png" height="30" />
           </va-list-item-section>
         </va-list-item>
+        </va-scroll-container>
       </va-sidebar>
-    </va-scroll-container>
+    
   </div>
 </template>
 
@@ -180,5 +181,11 @@ export default {
 }
 .va-icon + .va-icon {
   margin-left: 2rem;
+}
+.search_and_X {
+  height: 10%; 
+  background-color: #1a1a1a; 
+  padding-top: 2rem; 
+  padding-bottom: 2rem;
 }
 </style>
