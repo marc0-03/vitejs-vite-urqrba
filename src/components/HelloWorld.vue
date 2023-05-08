@@ -175,19 +175,24 @@ export default {
     <va-sidebar :minimized="minimized" width="21rem" minimized-width="64px">
       <va-scroll-container style="max-height: 47rem" vertical>
         <va-list-item v-for="car in cars" :key="index" class="list__item">
-
-          <va-list-item-section icon v-if="car.type=='Goods Transportation'">
+          <va-list-item-section icon v-if="car.type == 'Goods Transportation'">
             <img src="../assets/Truck.png" height="30" />
           </va-list-item-section>
 
-          <va-list-item-section icon v-if="car.type=='Medicinal Transportation'">
+          <va-list-item-section
+            icon
+            v-if="car.type == 'Medicinal Transportation'"
+          >
             <img src="../assets/Medic.png" height="30" />
           </va-list-item-section>
 
-          <va-list-item-section icon v-if="car.type=='Passenger Transportation'">
+          <va-list-item-section
+            icon
+            v-if="car.type == 'Passenger Transportation'"
+          >
             <img src="../assets/Car.png" height="30" />
           </va-list-item-section>
-          
+
           <va-list-item-section>
             <va-list-item-label>
               {{ car.name }} - {{ car.type }}
