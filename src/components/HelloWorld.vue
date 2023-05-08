@@ -12,7 +12,6 @@ const cars = [
     type: 'Goods Transportation',
     battery: '40',
     eta: '3',
-
   },
   {
     name: 'car2',
@@ -155,7 +154,7 @@ export default {
         </va-list-item-section>
       </va-list-item>
     </div>
-    <va-sidebar :minimized="minimized" width="23rem" minimized-width="64px">
+    <va-sidebar :minimized="minimized" width="21rem" minimized-width="64px">
       <va-scroll-container style="max-height: 52rem" vertical>
         <va-list-item v-for="car in cars" :key="index" class="list__item">
           <va-list-item-section icon v-if="car.type == 'Goods Transportation'">
@@ -177,7 +176,7 @@ export default {
           </va-list-item-section>
 
           <va-list-item-section>
-            <va-list-item-label>
+            <va-list-item-label class="listtext">
               {{ car.name }} - {{ car.type }}
             </va-list-item-label>
             <va-list-item-label caption>
@@ -208,5 +207,9 @@ export default {
   padding-left: 0.3rem;
   width: 21rem;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.55);
+}
+
+.listtext {
+  font-size: 14px;
 }
 </style>
