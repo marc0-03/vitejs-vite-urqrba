@@ -134,7 +134,8 @@ export default {
 </script>
 
 <template>
-  <div style="height: 48rem">
+  <div style="height: 100%">
+    <div style="height: 10%">
     <va-list-item width="21rem">
       <va-list-item-section>
         <va-input v-model="value" class="mb-6" placeholder="Search for a car" />
@@ -148,9 +149,9 @@ export default {
         />
       </va-list-item-section>
     </va-list-item>
-
     <va-list-separator spaced="true"> </va-list-separator>
-    <va-scroll-container style="max-height: 60rem" vertical>
+    </div>
+    <va-scroll-container style="max-height: 45rem" vertical>
       <va-sidebar :minimized="minimized" width="21rem" minimized-width="10px">
         <va-list-item v-for="car in cars" :key="index" class="list__item">
           <va-list-item-section icon>
