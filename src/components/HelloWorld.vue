@@ -11,133 +11,116 @@ const cars = [
     name: 'car1',
     type: 'Goods Transportation',
     battery: '40',
-    eta: '17',
-    src: '../assets/Truck.png',
+    eta: '3',
+
   },
   {
-    name: 'car1',
+    name: 'car2',
+    type: 'Passenger Transportation',
+    battery: '40',
+    eta: '5',
+  },
+  {
+    name: 'car3',
+    type: 'Passenger Transportation',
+    battery: '40',
+    eta: '9',
+  },
+  {
+    name: 'car4',
     type: 'Passenger Transportation',
     battery: '40',
     eta: '17',
-    src: '../assets/Truck.png',
+  },
+  {
+    name: 'car5',
+    type: 'Passenger Transportation',
+    battery: '40',
+    eta: '19',
+  },
+  {
+    name: 'car6',
+    type: 'Medicinal Transportation',
+    battery: '40',
+    eta: '25',
+  },
+  {
+    name: 'car7',
+    type: 'Medicinal Transportation',
+    battery: '40',
+    eta: '37',
+  },
+  {
+    name: 'car8',
+    type: 'Goods Transportation',
+    battery: '40',
+    eta: '38',
+  },
+  {
+    name: 'car9',
+    type: 'Passenger Transportation',
+    battery: '40',
+    eta: '40',
+  },
+  {
+    name: 'car10',
+    type: 'Passenger Transportation',
+    battery: '40',
+    eta: '44',
+  },
+  {
+    name: 'car11',
+    type: 'Goods Transportation',
+    battery: '40',
+    eta: '43',
+  },
+  {
+    name: 'car12',
+    type: 'Goods Transportation',
+    battery: '40',
+    eta: '48',
+  },
+  {
+    name: 'car13',
+    type: 'Goods Transportation',
+    battery: '40',
+    eta: '50',
+  },
+  {
+    name: 'car14',
+    type: 'Goods Transportation',
+    battery: '40',
+    eta: '55',
+  },
+  {
+    name: 'car15',
+    type: 'Passenger Transportation',
+    battery: '40',
+    eta: '70',
+  },
+  {
+    name: 'car16',
+    type: 'Goods Transportation',
+    battery: '40',
+    eta: '74',
+  },
+  {
+    name: 'car17',
+    type: 'Goods Transportation',
+    battery: '40',
+    eta: '81',
+  },
+  {
+    name: 'car18',
+    type: 'Passenger Transportation',
+    battery: '40',
+    eta: '82',
   },
   {
     name: 'car1',
     type: 'Goods Transportation',
     battery: '40',
-    eta: '17',
-    src: '../assets/Truck.png',
-  },
-  {
-    name: 'car1',
-    type: 'Goods Transportation',
-    battery: '40',
-    eta: '17',
-    src: '../assets/Truck.png',
-  },
-  {
-    name: 'car1',
-    type: 'Goods Transportation',
-    battery: '40',
-    eta: '17',
-    src: '../assets/Truck.png',
-  },
-  {
-    name: 'car1',
-    type: 'Goods Transportation',
-    battery: '40',
-    eta: '17',
-    src: '../assets/Truck.png',
-  },
-  {
-    name: 'car1',
-    type: 'Goods Transportation',
-    battery: '40',
-    eta: '17',
-    src: '../assets/Truck.png',
-  },
-  {
-    name: 'car1',
-    type: 'Goods Transportation',
-    battery: '40',
-    eta: '17',
-    src: '../assets/Truck.png',
-  },
-  {
-    name: 'car1',
-    type: 'Goods Transportation',
-    battery: '40',
-    eta: '17',
-    src: '../assets/Truck.png',
-  },
-  {
-    name: 'car1',
-    type: 'Goods Transportation',
-    battery: '40',
-    eta: '17',
-    src: '../assets/Truck.png',
-  },
-  {
-    name: 'car1',
-    type: 'Goods Transportation',
-    battery: '40',
-    eta: '17',
-    src: '../assets/Truck.png',
-  },
-  {
-    name: 'car1',
-    type: 'Goods Transportation',
-    battery: '40',
-    eta: '17',
-    src: '../assets/Truck.png',
-  },
-  {
-    name: 'car1',
-    type: 'Goods Transportation',
-    battery: '40',
-    eta: '17',
-    src: '../assets/Truck.png',
-  },
-  {
-    name: 'car1',
-    type: 'Goods Transportation',
-    battery: '40',
-    eta: '17',
-    src: '../assets/Truck.png',
-  },
-  {
-    name: 'car1',
-    type: 'Goods Transportation',
-    battery: '40',
-    eta: '17',
-    src: '../assets/Truck.png',
-  },
-  {
-    name: 'car1',
-    type: 'Goods Transportation',
-    battery: '40',
-    eta: '17',
-    src: '../assets/Truck.png',
-  },
-  {
-    name: 'car1',
-    type: 'Goods Transportation',
-    battery: '40',
-    eta: '17',
-    src: '../assets/Truck.png',
-  },
-  {
-    name: 'car1',
-    type: 'Goods Transportation',
-    battery: '40',
-    eta: '17',
-    src: '../assets/Medic.png',
-  },
-  {
-    name: 'car1',
-    type: 'Goods Transportation',
-    battery: '40',
-    eta: '17',
+    eta: '84',
   },
 ];
 </script>
@@ -172,8 +155,8 @@ export default {
         </va-list-item-section>
       </va-list-item>
     </div>
-    <va-sidebar :minimized="minimized" width="21rem" minimized-width="64px">
-      <va-scroll-container style="max-height: 47rem" vertical>
+    <va-sidebar :minimized="minimized" width="23rem" minimized-width="64px">
+      <va-scroll-container style="max-height: 52rem" vertical>
         <va-list-item v-for="car in cars" :key="index" class="list__item">
           <va-list-item-section icon v-if="car.type == 'Goods Transportation'">
             <img src="../assets/Truck.png" height="30" />
